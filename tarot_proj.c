@@ -9,7 +9,7 @@ int main(){
     char choice;
     int deck_size = 78;
     int deck[deck_size];
-    int card_place =0;
+    int card_place = 0;
     int card_num;
 
     printf("How many cards would you like to pull: ");
@@ -30,34 +30,39 @@ int main(){
 
         //0 = not reversed  1 = reversed
         reversed_cards[i] = rand() % 2;//variable to determine if the card is reversed
-        //printf("\n%d", reversed_cards[i]);//print statement to check if value =0 or =1
     }
     //condition ? expression_if_true : expression_if_false;
     printf("\nYour tarot reading is:\n");
     for(int i=0; i < card_num; i++){
         printf("%s %s\n", tarot_deck[selected_cards[i]], reversed_cards[i] ? "(reverse)" : " ");
     }
-    printf("\nWould you like to know what the major arcana cards mean?(y/n): ");
+    printf("\nWould you like to know what your cards mean?(y/n): ");
     scanf(" %c", &choice);
     printf("\n");
     
-    //0-21 major arc
-    //22-35 wands   36-49 cups  50-63 swords   64-77 pentacles
+    //issue having: not pulling correct card meaning for all cards
     if(choice == 'y' || choice == 'Y'){
         for(int i=0; i < card_num; i++){
-            int card_place = selected_cards[i];
-            if(card_place <= 22){
-                // printf("%s: %s\n", tarot_deck[selected_cards[i]], reversed_cards[i] ? arc_tarot_meaning_rev[card_place] : arc_tarot_meaning[card_place]);
-                if (reversed_cards[i]) {
+            card_place = selected_cards[i];
+            //major arcana
+            if(card_place <= 21){
+                if (reversed_cards[i]){
                     printf("%s (reverse): %s\n", tarot_deck[selected_cards[i]], arc_tarot_meaning_rev[card_place]);
                 } else {
                     printf("%s: %s\n", tarot_deck[selected_cards[i]], arc_tarot_meaning[card_place]);
                 }
             }
+            //minor arcana
+            if(card_place >= 22 && card_place <=77){
+                if (reversed_cards[i]){
+                    printf("%s (reversed): %s\n", tarot_deck[selected_cards[i]], rev_minor_arc[card_place]);
+                }else{
+                    printf("%s: %s\n", tarot_deck[selected_cards[i]], minor_arc[card_place]);
+                }
+            }
         }
-        printf("\n");
-    }else{
-        printf("Thanks for using this tarot reader!\n");
     }
+    printf("\n");
+
     return 0;
 }
