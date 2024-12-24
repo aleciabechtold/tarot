@@ -52,8 +52,8 @@ Four of Pentacles : Security, saving, control.
 - Implementation of header files in C.
 - Optimization of string based arrays in header files.
 
-## Acknowledgments
+### Acknowledgments
 - [Tarot Card Meaning](https://labyrinthos.co/blogs/tarot-card-meanings-list?srsltid=AfmBOoqjhRLhqDlfjAZBjXs2ALDIMBRSUWOCJHPsDq9UwSY6_DYi4i9G)
-- Thanks to the open-source community for assistance and inspiration in stuct based programs.
+
 
 
