@@ -1,10 +1,11 @@
 #define TAROT_MEANING_H
+
 typedef struct{
     const char* upright;
     const char* reversed;
-} tarot_meaning;
+} TarotMeaning;
 
-static const char* tarot_meaning card_meaning[78]={
+static const TarotMeaning tarot_meaning[78]={
     //The Fool
     {"New beginnings, spontaneity, freedom, innocence.","Recklessness, naïveté, poor decisions, lack of direction."},
     //The Magician
