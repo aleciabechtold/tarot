@@ -8,11 +8,11 @@ A C-based tarot card reading program that randomly selects and displays tarot ca
 - Provides the upright and reversed meanings of selected cards upon request.
 
 ## Table of Contents
-[Usage](#usage)
-[Files](#files)
-[Future Enhancements](#future-enhancements)
-[Learned](#learned)
-[Acknowledgments](#acknowledgments)
+- [Usage](#usage)
+- [Files](#files)
+- [Future Enhancements](#future-enhancements)
+- [Learned](#learned)
+- [Acknowledgments](#acknowledgments)
 
 ## Usage
 1. Run the program.
