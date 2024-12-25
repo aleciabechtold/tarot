@@ -52,8 +52,9 @@ int main(){
                    reversed_cards[i] ? "(reverse)" : "",
                    reversed_cards[i] ? card->reversed : card->upright);
         }
+    }else{
+        printf("Thanks for using this tarot reader.\n");
     }
     printf("\n");
-
     return 0;
 }
